@@ -1,0 +1,87 @@
+Transférer ce sujet ci-dessous:
+
+1️⃣ L’IA générative comme assistant de développement web (front-end & back-end)
+📌 Sujet
+
+Les IA génératives de code (comme ChatGPT, GitHub Copilot ou CodeWhisperer) sont utilisées comme assistants intelligents pour accélérer le développement web.
+Elles aident à :
+
+Générer du code HTML, CSS, JavaScript, React, Vue, etc.
+
+Créer des API back-end (Node.js, Python, PHP…)
+
+Corriger des bugs et expliquer du code existant
+
+Améliorer la productivité des développeurs
+
+🎯 Enjeu
+
+Réduction du temps de développement, mais dépendance accrue aux outils automatisés et nécessité de garder un esprit critique sur la qualité et la sécurité du code généré.
+
+🔗 Sources
+
+GitHub – About GitHub Copilot
+https://docs.github.com/en/copilot
+
+OpenAI – Introducing ChatGPT
+https://openai.com/blog/chatgpt
+
+Mozilla Developer Network (MDN) – AI-assisted coding overview
+https://developer.mozilla.org/
+
+
+
+Dans ce bloc de code ci dessous: 
+
+<!-- ================= BLOC DE VEILLE TECHNOLOGIQUE ================= -->
+<div class="card mb-4">
+
+  <!-- Image ou GIF du sujet -->
+  <div class="text-center">
+    <img
+      src="image/illustration_sujet.png"
+      class="img-fluid rounded my-3"
+      style="max-width: 250px;"
+      alt="Illustration du sujet de veille technologique"
+    >
+  </div>
+
+  <!-- Contenu texte -->
+  <div class="card-body">
+
+    <!-- Titre du sujet -->
+    <h5 class="card-title">Titre du sujet de veille</h5>
+
+    <!-- Date + source -->
+    <h6 class="card-subtitle mb-2 text-muted">
+      Mois Année — Nom de la source
+    </h6>
+
+    <!-- Description -->
+    <p class="card-text">
+      Phrase explicative résumant l’information principale liée au sujet de veille.
+    </p>
+
+    <!-- Impact -->
+    <p class="card-text">
+      <strong>Impact :</strong> conséquences techniques, économiques ou sociétales.
+    </p>
+
+    <!-- Avis personnel -->
+    <p class="card-text">
+      <em>Mon avis :</em> analyse personnelle, recul critique ou point de vue argumenté.
+    </p>
+
+    <!-- Lien vers la source -->
+    <a
+      href="https://lien-vers-la-source.com"
+      target="_blank"
+      rel="noopener"
+      class="card-link"
+    >
+      Voir la source
+    </a>
+
+  </div>
+</div>
+<!-- ================= FIN DU BLOC ================= -->

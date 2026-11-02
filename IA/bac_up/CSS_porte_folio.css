@@ -1,0 +1,75 @@
+#titreprinsipale {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* ===============================
+   JUSTIFICATION DU TEXTE
+   =============================== */
+
+.text-justify {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Amélioration optionnelle de la lisibilité */
+.card-text {
+  line-height: 1.3;
+}
+
+#bl1 {
+  background-color: #f8f9fa;
+  /* Couleur de fond claire */
+  border: 1px solid #dee2e6;
+  /* Bordure grise */
+  border-radius: 10px;
+  /* Coins arrondis */
+  padding: 20px;
+  /* Espacement interne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  width: 58vw;
+  /* 50 % de la largeur de l'écran */
+  height: 58vh;
+  /* 50 % de la hauteur de l'écran */
+  text-align: justify;
+  margin: 0 auto;
+}
+
+#bl2 {
+  background-color: #f8f9fa;
+  /* Couleur de fond claire */
+  border: 1px solid #dee2e6;
+  /* Bordure grise */
+  border-radius: 10px;
+  /* Coins arrondis */
+  padding: 20px;
+  /* Espacement interne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  width: 58vw;
+  /* 50 % de la largeur de l'écran */
+  height: 58vh;
+  /* 50 % de la hauteur de l'écran */
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#bl3 {
+  background-color: #f8f9fa;
+  /* Couleur de fond claire */
+  border: 1px solid #dee2e6;
+  /* Bordure grise */
+  border-radius: 10px;
+  /* Coins arrondis */
+  padding: 20px;
+  /* Espacement interne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+  width: 58vw;
+  /* 50 % de la largeur de l'écran */
+  height: 58vh;
+  /* 50 % de la hauteur de l'écran */
+  margin: 0 auto;
+  text-align: justify;
+}
