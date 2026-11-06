@@ -1,28 +1,35 @@
+@font-face {
+    font-family: "Digital-7";
+    src: url("digital-7 (mono italic).ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .blackout-sidebar-time {
     text-align: center;
     color: rgba(41, 253, 41, 0.882);
-    font-family: "police";
-}
-
-@font-face {
-    font-family: "police";
-    src: url("digital-7 (mono italic).ttf");
+    font-family: "Digital-7", monospace;
 }
 
 .blackout-sidebar-clock-label {
     font-size: 12px;
     letter-spacing: 2px;
+    box-shadow:
+        0 2px 6px rgba(0, 243, 0, 0.703);
 }
 
 .blackout-sidebar-clock {
-    font-family: monospace;
+    font-family: "Digital-7", monospace;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: normal;
+    
 }
 
 #Heure_locale {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: normal;
     color: rgba(41, 253, 41, 0.882);
-    font-family: "police";
+    font-family: "Digital-7", monospace;
+    box-shadow:
+        0 2px 6px rgba(0, 243, 0, 0.703);
 }
