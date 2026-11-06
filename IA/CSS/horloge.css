@@ -1,6 +1,12 @@
 .blackout-sidebar-time {
     text-align: center;
     color: rgba(41, 253, 41, 0.882);
+    font-family: "police";
+}
+
+@font-face {
+    font-family: "police";
+    src: url("digital-7 (mono italic).ttf");
 }
 
 .blackout-sidebar-clock-label {
@@ -12,4 +18,11 @@
     font-family: monospace;
     font-size: 20px;
     font-weight: bold;
+}
+
+#Heure_locale {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(41, 253, 41, 0.882);
+    font-family: "police";
 }
