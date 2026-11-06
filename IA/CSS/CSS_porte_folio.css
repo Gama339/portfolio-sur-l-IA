@@ -69,10 +69,11 @@ main {
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: 600;
+    color: #cad3e3;
 }
 
 .introduction p {
-    color: #565869;
+    color: #b8bbd4;
 }
 
 /* =========================================
