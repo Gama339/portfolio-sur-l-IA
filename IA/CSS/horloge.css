@@ -14,15 +14,18 @@
 .blackout-sidebar-clock-label {
     font-size: 12px;
     letter-spacing: 2px;
-    box-shadow:
-        0 2px 6px rgba(0, 243, 0, 0.703);
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.7),
+        0 0 8px rgba(0, 243, 0, 0.5);
 }
 
 .blackout-sidebar-clock {
     font-family: "Digital-7", monospace;
     font-size: 20px;
     font-weight: normal;
-    
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.8),
+        0 0 10px rgba(0, 243, 0, 0.6);
 }
 
 #Heure_locale {
@@ -30,6 +33,7 @@
     font-weight: normal;
     color: rgba(41, 253, 41, 0.882);
     font-family: "Digital-7", monospace;
-    box-shadow:
-        0 2px 6px rgba(0, 243, 0, 0.703);
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.8),
+        0 0 10px rgba(0, 243, 0, 0.6);
 }
