@@ -13,7 +13,6 @@ const horloge = document.getElementById(
 // Actualisation de l'heure.
 function actualiserHorlogeBlackout() {
 
-    // Vérification de l'existence de l'élément.
     if (!horloge) {
         return;
     }
@@ -41,4 +40,3 @@ setInterval(
     actualiserHorlogeBlackout,
     1000
 );
-
