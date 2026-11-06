@@ -31,11 +31,12 @@ main {
     font-size: 40px;
     text-align: center;
     font-weight: 600;
+    color: #cad3e3;
 }
 
 
 /* =========================================
-   EN-TÊTE ET NAVIGATION
+    EN-TÊTE ET NAVIGATION
    ========================================= */
 
 .site-header {
@@ -55,7 +56,7 @@ main {
 
 
 /* =========================================
-   INTRODUCTION
+    INTRODUCTION
    ========================================= */
 
 .introduction {
@@ -75,7 +76,7 @@ main {
 }
 
 /* =========================================
-   DIFFÉRENTS TYPES D'IA
+    DIFFÉRENTS TYPES D'IA
    ========================================= */
 
 .dif_type_ia {
@@ -129,14 +130,11 @@ main {
 
     padding: 20px;
 
-    border: 1px solid #dee2e6;
-    border-radius: 18px;
-
     text-align: justify;
 }
 
 /* =========================================
-   JUSTIFICATION DU TEXTE
+    JUSTIFICATION DU TEXTE
    ========================================= */
 
 .text-justify {
