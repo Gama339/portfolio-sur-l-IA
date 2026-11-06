@@ -1,0 +1,14 @@
+.blackout-sidebar-time {
+    text-align: center;
+}
+
+.blackout-sidebar-clock-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.blackout-sidebar-clock {
+    font-family: monospace;
+    font-size: 32px;
+    font-weight: bold;
+}

@@ -14,6 +14,9 @@
     <!--<link rel="stylesheet" href="CSS/CSS_porte_folio.css"> -->
     <link rel="stylesheet" href="CSS/CSS_porte_folio.css">
     <link rel="icon" href="image/favicon.svg" />
+    <link rel="script" href="JS/horloge.js">
+    <link rel="stylesheet" href="CSS/horloge.css">
+
 
 
 </head>
@@ -278,7 +281,59 @@
         </article>
 
     </main>
+    <div class="blackout-sidebar-time">
 
+        <p id="blackout-horloge" class="blackout-sidebar-clock" aria-label="Heure locale">
+            --:--:--
+        </p>
+
+    </div>
+    <script>
+        /*
+        ==========================================
+        HORLOGE EN TEMPS RÉEL
+        OPÉRATION BLACKOUT
+        ==========================================
+        */
+
+        // Récupération de l'élément HTML.
+        const horloge = document.getElementById(
+            'blackout-horloge'
+        );
+
+        // Actualisation de l'heure.
+        function actualiserHorlogeBlackout() {
+
+            // Vérification de l'existence de l'élément.
+            if (!horloge) {
+                return;
+            }
+
+            // Récupération de l'heure locale.
+            const maintenant = new Date();
+
+            // Formatage de l'heure : HH:MM:SS.
+            horloge.textContent =
+                maintenant.toLocaleTimeString(
+                    'fr-FR',
+                    {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    }
+                );
+        }
+
+        // Affichage immédiat de l'heure.
+        actualiserHorlogeBlackout();
+
+        // Actualisation automatique toutes les secondes.
+        setInterval(
+            actualiserHorlogeBlackout,
+            1000
+        );
+
+    </script>
 
     <!-- ================= FOOTER ================= -->
     <footer class="site-footer text-center p-3 mt-auto">
@@ -293,6 +348,7 @@
         <p class="mt-2 mb-0">
             © 2026 ℗ 2026 Antoine Carré
         </p>
+
 
     </footer>
 
