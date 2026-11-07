@@ -242,15 +242,9 @@ function initializeGlow(image) {
 
         if (!displayWidth || !displayHeight) return;
 
-        /*
-        Adaptation de la résolution du Canvas à l'écran.
-
-        Le facteur DPR améliore la netteté du rendu
-        sur les écrans haute densité.
-        */
-
         const dpr = window.devicePixelRatio || 1;
 
+        // Adaptation de la résolution du Canvas.
         canvas.width = Math.round(
             (displayWidth + padding * 2) * dpr
         );
@@ -259,9 +253,7 @@ function initializeGlow(image) {
             (displayHeight + padding * 2) * dpr
         );
 
-        context.setTransform(
-            dpr, 0, 0, dpr, 0, 0
-        );
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         context.clearRect(
             0,
@@ -271,197 +263,209 @@ function initializeGlow(image) {
         );
 
         /*
-        Le flou est appliqué directement pendant le dessin.
-
-        Les couleurs des bordures sont donc diffusées
-        naturellement autour de l'image.
+        ------------------------------------------------------
+        CONFIGURATION DE L'EFFET NÉON
+        ------------------------------------------------------
         */
 
-        context.filter = `blur(${GLOW_BLUR}px)`;
-
-        context.globalAlpha = GLOW_OPACITY;
-
-        context.lineWidth = GLOW_WIDTH;
-
-        context.lineCap = "round";
-
-
-        /* ----------------------------------------------
-           BORDURE SUPÉRIEURE
-        ---------------------------------------------- */
-
-        for (let x = 0; x < width; x += SAMPLE_STEP) {
-
-            const color = getAverageColor(x, 0, false);
-
-            const nextX = Math.min(
-                x + SAMPLE_STEP,
-                width
-            );
-
-            context.beginPath();
-
-            context.strokeStyle = color;
-
-            context.moveTo(
-                padding + x / width * displayWidth,
-                padding
-            );
-
-            context.lineTo(
-                padding + nextX / width * displayWidth,
-                padding
-            );
-
-            context.stroke();
-
-        }
-
-
-        /* ----------------------------------------------
-           BORDURE INFÉRIEURE
-        ---------------------------------------------- */
-
-        for (let x = 0; x < width; x += SAMPLE_STEP) {
-
-            const color = getAverageColor(
-                x,
-                height - BORDER_SAMPLE_SIZE,
-                false
-            );
-
-            const nextX = Math.min(
-                x + SAMPLE_STEP,
-                width
-            );
-
-            context.beginPath();
-
-            context.strokeStyle = color;
-
-            context.moveTo(
-                padding + x / width * displayWidth,
-                padding + displayHeight
-            );
-
-            context.lineTo(
-                padding + nextX / width * displayWidth,
-                padding + displayHeight
-            );
-
-            context.stroke();
-
-        }
-
-
-        /* ----------------------------------------------
-           BORDURE GAUCHE
-        ---------------------------------------------- */
-
-        for (let y = 0; y < height; y += SAMPLE_STEP) {
-
-            const color = getAverageColor(0, y, true);
-
-            const nextY = Math.min(
-                y + SAMPLE_STEP,
-                height
-            );
-
-            context.beginPath();
-
-            context.strokeStyle = color;
-
-            context.moveTo(
-                padding,
-                padding + y / height * displayHeight
-            );
-
-            context.lineTo(
-                padding,
-                padding + nextY / height * displayHeight
-            );
-
-            context.stroke();
-
-        }
-
-
-        /* ----------------------------------------------
-           BORDURE DROITE
-        ---------------------------------------------- */
-
-        for (let y = 0; y < height; y += SAMPLE_STEP) {
-
-            const color = getAverageColor(
-                width - BORDER_SAMPLE_SIZE,
-                y,
-                true
-            );
-
-            const nextY = Math.min(
-                y + SAMPLE_STEP,
-                height
-            );
-
-            context.beginPath();
-
-            context.strokeStyle = color;
-
-            context.moveTo(
-                padding + displayWidth,
-                padding + y / height * displayHeight
-            );
-
-            context.lineTo(
-                padding + displayWidth,
-                padding + nextY / height * displayHeight
-            );
-
-            context.stroke();
-
-        }
-
+        // Épaisseur du contour lumineux.
+        const neonWidth = 2;
 
         /*
-        Réinitialisation des paramètres du contexte.
+        Trois couches lumineuses :
+    
+        1. Halo extérieur : diffusion large et discrète.
+        2. Halo intermédiaire : rayonnement coloré.
+        3. Contour intérieur : lumière plus précise.
         */
 
-        context.filter = "none";
+        const neonLayers = [
+            {
+                blur: 24,
+                width: 3,
+                opacity: 0.35
+            },
+            {
+                blur: 12,
+                width: 2.5,
+                opacity: 0.65
+            },
+            {
+                blur: 5,
+                width: neonWidth,
+                opacity: 1
+            }
+        ];
 
-        context.globalAlpha = 1;
+        /*
+        ------------------------------------------------------
+        DESSIN DES CONTOURS LUMINEUX
+        ------------------------------------------------------
+        */
+
+        function drawNeonLine(points) {
+
+            for (const layer of neonLayers) {
+
+                context.save();
+
+                context.lineWidth = layer.width;
+                context.lineCap = "round";
+                context.lineJoin = "round";
+
+                context.globalAlpha = layer.opacity;
+
+                context.shadowBlur = layer.blur;
+
+                /*
+                Chaque segment conserve sa propre couleur.
+    
+                Le rayonnement utilise donc les couleurs
+                réellement présentes sur la bordure.
+                */
+
+                for (let i = 0; i < points.length - 1; i++) {
+
+                    const current = points[i];
+                    const next = points[i + 1];
+
+                    context.beginPath();
+
+                    context.strokeStyle = current.color;
+                    context.shadowColor = current.color;
+
+                    context.moveTo(current.x, current.y);
+                    context.lineTo(next.x, next.y);
+
+                    context.stroke();
+                }
+
+                context.restore();
+            }
+        }
+
+        /*
+        ------------------------------------------------------
+        EXTRACTION DES COULEURS DES QUATRE CÔTÉS
+        ------------------------------------------------------
+        */
+
+        const horizontalPoints = [];
+        const verticalPoints = [];
+
+        // Bordure supérieure.
+        for (let x = 0; x <= width; x += SAMPLE_STEP) {
+
+            horizontalPoints.push({
+                x: padding + x / width * displayWidth,
+                y: padding,
+                color: getAverageColor(
+                    Math.min(x, width - 1),
+                    0,
+                    false
+                )
+            });
+        }
+
+        // Bordure inférieure.
+        for (let x = 0; x <= width; x += SAMPLE_STEP) {
+
+            horizontalPoints.push({
+                x: padding + x / width * displayWidth,
+                y: padding + displayHeight,
+                color: getAverageColor(
+                    Math.min(x, width - 1),
+                    height - BORDER_SAMPLE_SIZE,
+                    false
+                )
+            });
+        }
+
+        // Bordure gauche.
+        for (let y = 0; y <= height; y += SAMPLE_STEP) {
+
+            verticalPoints.push({
+                x: padding,
+                y: padding + y / height * displayHeight,
+                color: getAverageColor(
+                    0,
+                    Math.min(y, height - 1),
+                    true
+                )
+            });
+        }
+
+        // Bordure droite.
+        for (let y = 0; y <= height; y += SAMPLE_STEP) {
+
+            verticalPoints.push({
+                x: padding + displayWidth,
+                y: padding + y / height * displayHeight,
+                color: getAverageColor(
+                    width - BORDER_SAMPLE_SIZE,
+                    Math.min(y, height - 1),
+                    true
+                )
+            });
+        }
+
+        /*
+        ------------------------------------------------------
+        APPLICATION DES EFFETS LUMINEUX
+        ------------------------------------------------------
+        */
+
+        drawNeonLine(horizontalPoints.slice(0,
+            Math.ceil((width + 1) / SAMPLE_STEP)));
+
+        drawNeonLine(horizontalPoints.slice(
+            Math.ceil((width + 1) / SAMPLE_STEP)
+        ));
+
+        drawNeonLine(verticalPoints);
 
     }
 
 
-    /* ==================================================
-       MISE À JOUR AUTOMATIQUE
-    ================================================== */
-
     /*
-    Si l'image change de dimensions, on régénère le halo.
-
-    Cela permet de conserver les proportions lorsque
-    l'image est redimensionnée par le CSS.
+    Réinitialisation des paramètres du contexte.
     */
 
-    const resizeObserver = new ResizeObserver(() => {
+    context.filter = "none";
 
-        generateGlow();
+    context.globalAlpha = 1;
 
-    });
-
-    resizeObserver.observe(image);
+}
 
 
-    /* ==================================================
-       PREMIÈRE GÉNÉRATION
-    ================================================== */
+/* ==================================================
+   MISE À JOUR AUTOMATIQUE
+================================================== */
+
+/*
+Si l'image change de dimensions, on régénère le halo.
+
+Cela permet de conserver les proportions lorsque
+l'image est redimensionnée par le CSS.
+*/
+
+const resizeObserver = new ResizeObserver(() => {
 
     generateGlow();
 
-    console.log(
-        "Halo lumineux initialisé :",
-        image.src
-    );
+});
 
-}
+resizeObserver.observe(image);
+
+
+/* ==================================================
+   PREMIÈRE GÉNÉRATION
+================================================== */
+
+generateGlow();
+
+console.log(
+    "Halo lumineux initialisé :",
+    image.src
+);
+
