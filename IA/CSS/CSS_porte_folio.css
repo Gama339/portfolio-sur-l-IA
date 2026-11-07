@@ -547,3 +547,53 @@ main {
         font-size: 16px;
     }
 }
+
+/*==========================================
+    image IA2
+===========================================*/
+/* Conteneur principal */
+.image-glow {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+    line-height: 0;
+}
+
+/* Image originale */
+.image-glow .glow-target {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Canvas générant le halo lumineux */
+.image-glow .glow-canvas {
+    position: absolute;
+
+    /* Débordement autour de l'image */
+    inset: -35px;
+
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+
+    z-index: 0;
+    pointer-events: none;
+
+    /* Apparition progressive */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Activation au survol */
+.image-glow:hover .glow-canvas {
+    opacity: 1;
+}
+
+/* Accessibilité : respect des animations réduites */
+@media (prefers-reduced-motion: reduce) {
+    .image-glow .glow-canvas {
+        transition: none;
+    }
+}
