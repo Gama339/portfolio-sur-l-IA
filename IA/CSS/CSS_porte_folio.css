@@ -77,6 +77,13 @@ main {
 }
 
 /* =========================================
+    Accueil TITRE PRINCIPALE
+   ========================================= */
+#AcT {
+    color: #cad3e3;
+}
+
+/* =========================================
     DIFFÉRENTS TYPES D'IA
    ========================================= */
 
@@ -88,20 +95,17 @@ main {
     max-width: 100%;
     height: auto;
     min-height: 80px;
-
     margin-right: auto;
     margin-left: auto;
-
     padding: 20px;
-
-    border: 1px solid #e7aeff;
+    border: 1px solid #aecaff;
     border-radius: 18px;
-    border-color: #e7aeff;
-
+    border-color: #0536fb;
 }
+
 .dif_type_ia:hover {
     box-shadow:
-        0 8px 24px #d167ff;
+        0 8px 24px #05adfb;
 }
 
 .dif_type_ia h3 {
@@ -113,7 +117,6 @@ main {
     margin-bottom: 20px;
     color: #2a2d52;
     align-items: center;
-
 }
 
 .dif_type_ia p {
@@ -125,12 +128,9 @@ main {
     max-width: 100%;
     height: auto;
     min-height: 60px;
-
     margin-right: auto;
     margin-left: auto;
-
     padding: 20px;
-
     text-align: justify;
 }
 
@@ -162,17 +162,12 @@ main {
     max-width: 100%;
     height: auto;
     min-height: 58vh;
-
     margin-right: auto;
     margin-left: auto;
-
     padding: 20px;
-
     border: 1px solid #dee2e6;
     border-radius: 18px;
-
     text-align: justify;
-
     transition:
         border-color 0.3s ease,
         box-shadow 0.3s ease,
@@ -217,7 +212,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -228,11 +222,9 @@ main {
 
 .ai-logo {
     display: block;
-
     width: auto;
     max-width: 220px;
     max-height: 150px;
-
     object-fit: contain;
 }
 
@@ -245,7 +237,6 @@ main {
 .ai-gemini {
     background-color: #f3f6ff;
     border-color: #c9d7ff;
-
     box-shadow:
         0 4px 12px rgba(66, 134, 244, 0.61);
 }
@@ -260,7 +251,6 @@ main {
 
 .ai-gemini:hover {
     border-color: #8ca9ff;
-
     box-shadow:
         0 8px 24px rgba(66, 134, 244, 0.882);
 }
@@ -288,7 +278,6 @@ main {
 .ai-chatgpt {
     background-color: #f7f7f8;
     border-color: #d8d8dd;
-
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.333);
 }
@@ -303,7 +292,6 @@ main {
 
 .ai-chatgpt:hover {
     border-color: #d7bb06;
-
     box-shadow:
         0 8px 24px #d7bb06;
 }
@@ -331,7 +319,6 @@ main {
 .ai-claude {
     background-color: #faf5ed;
     border-color: #e8d4bd;
-
     box-shadow:
         0 4px 12px rgba(150, 90, 45, 0.404);
 }
@@ -346,7 +333,6 @@ main {
 
 .ai-claude:hover {
     border-color: #c9825e;
-
     box-shadow:
         0 8px 24px rgba(193, 96, 60, 0.718);
 }
@@ -372,17 +358,13 @@ main {
 
 .ai-button {
     display: inline-block;
-
     margin-top: 12px;
     padding: 11px 24px;
-
     border: 1px solid transparent;
     border-radius: 30px;
-
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-
     transition:
         background-color 0.3s ease,
         border-color 0.3s ease,
@@ -400,7 +382,6 @@ main {
 
 .site-footer {
     margin-top: auto;
-
     background-color: #0d6efd;
     color: #ffffff;
 }
@@ -420,7 +401,6 @@ main {
    ========================================= */
 
 @media (max-width: 992px) {
-
     .ai-card {
         width: 80%;
     }
@@ -428,7 +408,6 @@ main {
     .introduction h2 {
         font-size: 26px;
     }
-
 }
 
 
@@ -458,7 +437,6 @@ main {
     .ai-card {
         width: 100%;
         min-height: 0;
-
         padding: 12px;
         border-radius: 14px;
     }
