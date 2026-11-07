@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Veille technologique - Intelligence artificielle</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personnel -->
+    <!--<link rel="stylesheet" href="CSS/CSS_porte_folio.css"> -->
+    <link rel="stylesheet" href="CSS/CSS_porte_folio.css">
+    <link rel="icon" href="image/favicon.svg" />
+    <link rel="script" href="JS/horloge.js">
+    <link rel="stylesheet" href="CSS/horloge.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="container py-4">
+
+        <div class="site-header">
+
+            <h1 id="titreprinsipale">
+                Veille technologique
+            </h1>
+            <div class="blackout-sidebar-time">
+
+                <p id="blackout-horloge" class="blackout-sidebar-clock" aria-label="Heure_locale">
+                    --:--:--
+                </p>
+
+            </div>
+            <nav aria-label="Navigation principale">
+
+                <a class="btn btn-primary me-2" href="index.html">
+                    Accueil
+                </a>
+
+                <a class="btn btn-primary" href="velle_technologique.html">
+                    Veille technologique
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENU PRINCIPAL ================= -->
+    <main class="container my-4 text-center">
+
+        <!-- Image principale -->
+        <img src="image/IA2.png" class="img-fluid mb-4"
+            alt="Illustration de la veille technologique sur l'intelligence artificielle">
+        <!-- Conteneur de l'image et de son halo lumineux -->
+        <!-- <div class="image-glow"><img src="image/IA2.png" alt="Illustration futuriste" class="glow-target"></div> -->
+
+        <!-- Chargement du générateur de halo -->
+        <!-- <script src="JS/halo.js" defer></script> -->
+
+        <!-- Introduction -->
+        <section class="introduction mb-5">
+
+            <h2>Les intelligences artificielles et le développement web</h2>
+
+            <p>
+                Cette veille technologique porte sur l'intelligence
+                artificielle dans le développement web et logiciel.
+                Elle vise à étudier les capacités des différents assistants
+                IA, leurs applications concrètes, leurs avantages et leurs limites.
+            </p>
+
+        </section>
+        <section class="dif_type_ia">
+            <h3>Les différents types d'intelligences artificielles</h3>
+            <div>
+                <p> Les intelligences artificielles peuvent être classées en deux grandes catégories : <br> les LLMs
+                    (Large
+                    Language Models) et les World Models, en français les modèles mondes. [...] <br>
+
+                    Si les LLMs savent “parler du monde”, les World Models visent à comprendre et prédire le
+                    monde.
+                    [...]
+
+                    Tirer de la source : <a href="https://fenxi.fr/blog/alternatives-llms-world-models/ "
+                        target="_blank">fenxi.fr</a>
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ================= CARTE 1 : GEMINI ================= -->
+        <article class="card mb-4 ai-card ai-gemini" id="bl1">
+
+            <!-- Logo Gemini -->
+            <div class="ai-image-container">
+
+                <img src="image/Google-Gemini-Logo.png" class="img-fluid ai-logo" id="imgbl1"
+                    alt="Logo de Google Gemini" loading="lazy">
+
+            </div>
+
+            <div class="card-body">
+
+                <h2 class="card-title">Google Gemini</h2>
+
+                <h3 class="card-subtitle mb-3">
+                    L'intelligence artificielle de Google
+                </h3>
+
+                <!-- Description -->
+                <p class="card-text text-justify">
+                    Gemini est une famille de modèles d'intelligence
+                    artificielle développée par Google. Elle peut aider
+                    à la rédaction, à l'analyse de documents et à la
+                    programmation.
+                </p>
+
+                <!-- Capacités web -->
+                <h4>Capacités en développement web</h4>
+
+                <p class="card-text text-justify">
+                    Cette partie permettra d'étudier ses capacités à
+                    produire du HTML et du CSS, à générer du JavaScript,
+                    à expliquer du code et à participer à la création
+                    d'interfaces web.
+                </p>
+                <!-- Prévisualisation de la page Gemini -->
+                <div class="preview-container">
+
+                    <h4 class="preview-title">Aperçu de la page Gemini</h4>
+
+                    <iframe src="gemini.html" class="ai-preview" title="Prévisualisation de la page Google Gemini"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+                <br>
+                <!-- Impact -->
+                <p class="card-text text-justify">
+                    <strong>Impact :</strong>
+                    à compléter selon les résultats de la veille.
+                </p>
+
+                <!-- Avis personnel -->
+                <p class="card-text text-justify">
+                    <em>Mon avis :</em>
+                    à compléter après les essais et les comparaisons.
+                </p>
+
+                <!-- Accès à la page complète -->
+                <a href="gemini.html" class="btn ai-button">
+                    Ouvrir la page Gemini
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ================= CARTE 2 : CHATGPT ================= -->
+        <article class="card mb-4 ai-card ai-chatgpt" id="bl2">
+
+            <!-- Logo OpenAI -->
+            <div class="ai-image-container">
+
+                <img src="image/gif/GPT/GPT.gif" class="img-fluid ai-logo" id="imgbl2"
+                    alt="Logo animé d'OpenAI et de ChatGPT" loading="lazy">
+
+            </div>
+
+            <div class="card-body">
+
+                <h2 class="card-title">OpenAI — ChatGPT</h2>
+
+                <h3 class="card-subtitle mb-3">
+                    L'assistant conversationnel d'OpenAI
+                </h3>
+
+                <!-- Description -->
+                <p class="card-text text-justify">
+                    ChatGPT est un assistant conversationnel développé
+                    par OpenAI. Il peut notamment aider à rédiger des
+                    textes, à analyser des informations et à résoudre
+                    des problèmes de programmation.
+                </p>
+
+                <!-- Capacités web -->
+                <h4>Capacités en développement web</h4>
+
+                <p class="card-text text-justify">
+                    Cette partie permettra d'étudier sa capacité à
+                    concevoir des pages HTML, à créer des feuilles de
+                    style CSS, à développer des fonctionnalités en
+                    JavaScript et à corriger des erreurs de code.
+                </p>
+                <!-- Prévisualisation de la page ChatGPT -->
+                <div class="preview-container">
+
+                    <h4 class="preview-title">Aperçu de la page ChatGPT</h4>
+
+                    <iframe src="chategpt.html" class="ai-preview" title="Prévisualisation de la page ChatGPT"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+                <br>
+                <!-- Impact -->
+                <p class="card-text text-justify">
+                    <strong>Impact :</strong>
+                    à compléter selon les résultats de la veille.
+                </p>
+
+                <!-- Avis personnel -->
+                <p class="card-text text-justify">
+                    <em>Mon avis :</em>
+                    à compléter après les essais et les comparaisons.
+                </p>
+
+                <!-- Accès à la page complète -->
+                <a href="chategpt.html" class="btn ai-button">
+                    Ouvrir la page ChatGPT
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ================= CARTE 3 : CLAUDE ================= -->
+        <article class="card mb-4 ai-card ai-claude" id="bl3">
+
+            <!-- Logo Claude -->
+            <div class="ai-image-container">
+
+                <img src="image/claude.png" class="img-fluid ai-logo" id="imgbl3"
+                    alt="Logo de Claude, l'intelligence artificielle d'Anthropic" loading="lazy">
+
+            </div>
+
+            <div class="card-body">
+
+                <h2 class="card-title">Claude</h2>
+
+                <h3 class="card-subtitle mb-3">
+                    L'intelligence artificielle d'Anthropic
+                </h3>
+
+                <!-- Description -->
+                <p class="card-text text-justify">
+                    Claude est une famille de modèles d'intelligence
+                    artificielle développée par Anthropic. Elle peut
+                    assister les utilisateurs dans la rédaction,
+                    l'analyse de documents et la programmation.
+                </p>
+
+                <!-- Capacités web -->
+                <h4>Capacités en développement web</h4>
+
+                <p class="card-text text-justify">
+                    Cette partie permettra d'étudier ses capacités
+                    à générer du HTML et du CSS, à développer des
+                    fonctionnalités web, à comprendre des projets
+                    existants et à améliorer la structure du code.
+                </p>
+                <!-- Prévisualisation de la page Claude -->
+                <div class="preview-container">
+
+                    <h4 class="preview-title">Aperçu de la page Claude</h4>
+
+                    <iframe src="claude.html" class="ai-preview" title="Prévisualisation de la page Claude"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+                <br>
+                <!-- Impact -->
+                <p class="card-text text-justify">
+                    <strong>Impact :</strong>
+                    à compléter selon les résultats de la veille.
+                </p>
+
+                <!-- Avis personnel -->
+                <p class="card-text text-justify">
+                    <em>Mon avis :</em>
+                    à compléter après les essais et les comparaisons.
+                </p>
+
+                <!-- Accès à la page complète -->
+                <a href="claude.html" class="btn ai-button">
+                    Ouvrir la page Claude
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer text-center p-3 mt-auto">
+
+        <a href="https://github.com/Gama339" target="_blank" rel="noopener noreferrer"
+            aria-label="Visiter mon profil GitHub">
+
+            <img src="image/github.png" width="50" height="50" alt="GitHub" title="Mon GitHub">
+
+        </a>
+
+        <p class="mt-2 mb-0">
+            © 2026 ℗ 2026 Antoine Carré
+        </p>
+
+    </footer>
+    <script src="JS/horloge.js"></script>
+
+</body>
+
+</html>

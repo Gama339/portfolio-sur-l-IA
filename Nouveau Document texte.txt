@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veille technologique</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS_porte_folio.css">
+  
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="container py-4">
+    <div class="d-flex align-items-center justify-content-between">
+      <h1 class="display-4 text-center mb-4">Veille technologique</h1>
+
+      <nav>
+        <a class="btn btn-primary me-2" href="index.html">Accueil</a>
+        <a class="btn btn-primary" href="velle_technologique.html">Veille technologique</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= CONTENU PRINCIPAL ================= -->
+  <main class="container my-4 text-center">
+
+    <!-- Image principale -->
+    <img src="image/IA.png" class="img-fluid mb-4" alt="Illustration de la veille technologique sur l'intelligence artificielle">
+
+    <!-- Introduction -->
+    <h3>Page en construction</h3>
+    <p class="mt-2">
+      Cette veille technologique porte sur l’intelligence artificielle, en développement WEB et logiciel, ainsi que ses applications concrètes.
+    </p>
+
+    <!-- ================= CARTES ================= -->
+    <div class="card mb-4">
+      <img src="image/gif/Flag_of_Europe.gif" class="img-fluid rounded my-3" style="max-width: 200px;" alt="Illustration sur la réglementation européenne">
+      <div class="card-body">
+        <h5 class="card-title">EU AI Act — étapes et guidelines pour GPAI</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Décembre 2025 — Commission européenne</h6>
+        <p class="card-text">Des obligations de gouvernance pour les modèles d’IA ont été précisées, accompagnées de guidelines.</p>
+        <p class="card-text"><strong>Impact :</strong> renforcement des obligations de conformité.</p>
+        <p class="card-text"><em>Mon avis :</em> cette réglementation est nécessaire pour garantir une utilisation responsable.</p>
+        <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener" class="card-link">Voir la source</a>
+      </div>
+    </div>
+
+    <!-- Autres cartes similaires ici... -->
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary text-white text-center p-3 mt-auto">
+    <a href="https://github.com/Gama339" target="_blank" rel="noopener">
+      <img src="image/github.png" width="50" height="50" alt="GitHub d'Antoine Carré" title="Mon GitHub">
+    </a>
+    <p class="mt-2 mb-0">© 2026 Antoine Carré</p>
+  </footer>
+
+</body>
+</html>

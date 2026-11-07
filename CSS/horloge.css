@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Digital-7";
+    src: url("digital-7 (mono italic).ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blackout-sidebar-time {
+    text-align: center;
+    color: rgba(41, 253, 41, 0.882);
+    font-family: "Digital-7", monospace;
+}
+
+.blackout-sidebar-clock-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.7),
+        0 0 8px rgba(0, 243, 0, 0.5);
+}
+
+.blackout-sidebar-clock {
+    font-family: "Digital-7", monospace;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.8),
+        0 0 10px rgba(0, 243, 0, 0.6);
+}
+
+#Heure_locale {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgba(41, 253, 41, 0.882);
+    font-family: "Digital-7", monospace;
+    text-shadow:
+        0 0 4px rgba(0, 243, 0, 0.8),
+        0 0 10px rgba(0, 243, 0, 0.6);
+}

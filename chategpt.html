@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OpenAI - ChatGPT</title>
+
+    <link rel="stylesheet" href="CSS/chategpt.css">
+    <!-- Thème de coloration syntaxique uniquement -->
+    <link rel="stylesheet" href="bibliotheques/highlight/styles/github-dark.min.css">
+</head>
+
+<body>
+
+    <!-- Barre de navigation -->
+    <header>
+
+        <div class="logo">
+            OpenAI
+        </div>
+
+        <nav>
+            <a href="#presentation">Présentation</a>
+            <a href="#fonctionnalites">Fonctionnalités</a>
+            <a href="#apropos">À propos</a>
+            <a href="velle_technologique.html">Veille technologique</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Présentation principale -->
+    <main>
+
+        <section class="hero" id="presentation">
+
+            <h1>Découvrez ChatGPT</h1>
+
+            <p>
+                Explorez l'intelligence artificielle développée
+                par OpenAI pour dialoguer, apprendre, créer
+                et résoudre des problèmes.
+            </p>
+
+            <a href="#fonctionnalites" class="btn">
+                Découvrir ChatGPT
+            </a>
+
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section class="container" id="fonctionnalites">
+
+            <h2>Les fonctionnalités de ChatGPT</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>Rédaction</h3>
+
+                    <p>
+                        Rédiger des textes, résumer des documents,
+                        expliquer des concepts et trouver des idées.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>Programmation</h3>
+
+                    <p>
+                        Écrire du code, expliquer des algorithmes,
+                        corriger des erreurs et concevoir des projets.
+                    </p>
+                    <div class="code-example">
+                        <pre><code>
+                        &lt;h1&gt;Bonjour le monde !&lt;/h1&gt;
+                        &lt;p&gt;Ceci est un exemple de codes html.&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    
+                    <div class="test-code">
+
+                        <p>Génération de codes aléatoires et insertion dans MySQL</p>
+
+                        <pre><code class="language-python">
+                        # Importation des bibliothèques nécessaires
+                        import random
+                        import mysql.connector
+
+
+                        # ==================================================
+                        # 1. CONNEXION À LA BASE DE DONNÉES MYSQL
+                        # ==================================================
+
+                        connexion = mysql.connector.connect(
+                            host="localhost",       # Adresse IP du serveur MySQL
+                            user="mon_utilisateur",                # Nom d'utilisateur MySQL
+                            password="mon_mot_de_passe",            # Mot de passe MySQL
+                            database="mon_base_de_donnees"              # Nom de la base de données
+                        )
+
+                        # Création d'un curseur pour exécuter les requêtes SQL
+                        curseur = connexion.cursor()
+
+
+                        try:
+
+                            # ==================================================
+                            # 2. PRÉPARATION DE LA REQUÊTE SQL
+                            # ==================================================
+
+                            # INSERT IGNORE permet d'ignorer les doublons
+                            # si la colonne resultat possède une contrainte UNIQUE.
+                            requete = """
+                            INSERT IGNORE INTO resultats (resultat)
+                                VALUES (%s)
+                            """
+
+                            # Compteur du nombre de tentatives effectuées
+                            tentatives = 0
+
+                            # Compteur du nombre de lignes réellement insérées
+                            insertions = 0
+
+
+                            # ==================================================
+                            # 3. GÉNÉRATION DES RÉSULTATS ALÉATOIRES
+                            # ==================================================
+
+                            # La boucle effectue 10 000 tentatives
+                            for i in range(10000):
+
+                                # Génération de quatre chiffres entre 0 et 9
+                                A = random.randint(0, 9)
+                                B = random.randint(0, 9)
+                                C = random.randint(0, 9)
+                                D = random.randint(0, 9)
+
+                                # Concaténation des quatre chiffres
+                                # Exemple : 3, 7, 0, 5 devient "3705"
+                                resultat = str(A) + str(B) + str(C) + str(D)
+
+                                # Affichage du résultat généré
+                                print(resultat)
+
+                                # ==================================================
+                                # 4. INSERTION DANS MYSQL
+                                # ==================================================
+
+                                # Le résultat est transmis sous forme de tuple.
+                                # La virgule est nécessaire pour un tuple à un élément.
+                                valeurs = (resultat,)
+
+                                # Exécution de la requête SQL
+                                curseur.execute(requete, valeurs)
+
+                                # Comptabilisation de la tentative
+                                tentatives += 1
+
+                                # rowcount vaut généralement 1 si une ligne a été insérée,
+                                # et 0 si INSERT IGNORE a ignoré un doublon.
+                                insertions += curseur.rowcount
+
+
+                        # ==================================================
+                        # 5. VALIDATION DES INSERTIONS
+                        # ==================================================
+
+                        # Enregistrement définitif des modifications dans MySQL
+                        connexion.commit()
+
+                        # Affichage du bilan
+                        print("\n========== BILAN ==========")
+                        print("Tentatives effectuées :", tentatives)
+                        print("Nouvelles lignes insérées :", insertions)
+                        print("Doublons ignorés :", tentatives - insertions)
+
+
+                        # ==================================================
+                        # 6. GESTION DES ERREURS MYSQL
+                        # ==================================================
+
+                        except mysql.connector.Error as erreur:
+
+                            # Annulation des modifications non validées
+                            connexion.rollback()
+
+                            # Affichage du message d'erreur
+                            print("Erreur MySQL :", erreur)
+
+
+                        # ==================================================
+                        # 7. FERMETURE DES RESSOURCES
+                        # ==================================================
+
+                        finally:
+
+                        # Fermeture du curseur
+                        curseur.close()
+
+                        # Fermeture de la connexion MySQL
+                        connexion.close()
+
+                        print("Connexion MySQL fermée.")
+                        </code></pre>
+
+                    </div>
+                    
+
+                </article>
+
+                <article class="card">
+
+                    <h3>Analyse multimodale</h3>
+
+                    <p>
+                        Selon le modèle et les fonctionnalités disponibles,
+                        analyser des images, travailler avec la voix
+                        et traiter différents types de contenus.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Présentation d'OpenAI -->
+        <section class="container" id="apropos">
+
+            <h2>À propos d'OpenAI</h2>
+
+            <p>
+                OpenAI est une entreprise spécialisée dans
+                la recherche et le développement de systèmes
+                d'intelligence artificielle. ChatGPT est l'un
+                de ses assistants conversationnels.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+
+        <p>
+            Page informative consacrée à OpenAI et ChatGPT.
+        </p>
+
+    </footer>
+    <!-- Bibliothèque de coloration syntaxique -->
+    <script src="bibliotheques/highlight/highlight.min.js"></script>
+
+    <!-- Activation de la coloration syntaxique -->
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

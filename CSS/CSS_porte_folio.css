@@ -1,0 +1,599 @@
+/* =========================================
+   STYLE GÉNÉRAL
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202123;
+    background-color: #293133;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* =========================================
+   TITRE PRINCIPAL
+   ========================================= */
+
+#titreprinsipale {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: #cad3e3;
+}
+
+
+/* =========================================
+    EN-TÊTE ET NAVIGATION
+   ========================================= */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* =========================================
+    INTRODUCTION
+   ========================================= */
+
+.introduction {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.introduction h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #cad3e3;
+}
+
+.introduction p {
+    color: #b8bbd4;
+}
+
+/* =========================================
+    Accueil TITRE PRINCIPALE
+   ========================================= */
+#AcT {
+    color: #cad3e3;
+}
+
+/* =========================================
+    DIFFÉRENTS TYPES D'IA
+   ========================================= */
+
+.dif_type_ia {
+    background-color: #ffffffa2;
+    margin-bottom: 20px;
+    hyphens: auto;
+    width: 58vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid #aecaff;
+    border-radius: 18px;
+    border-color: #0536fb;
+}
+
+.dif_type_ia:hover {
+    box-shadow:
+        0 8px 24px #05adfb;
+}
+
+.dif_type_ia h3 {
+    color: #22232f;
+    align-items: center;
+}
+
+.dif_type_ia div {
+    margin-bottom: 20px;
+    color: #2a2d52;
+    align-items: center;
+}
+
+.dif_type_ia p {
+    align-items: justify;
+    color: #1f287b;
+    margin-bottom: 20px;
+    hyphens: auto;
+    width: 58vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* =========================================
+    JUSTIFICATION DU TEXTE
+   ========================================= */
+
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+/* =========================================
+   LISIBILITÉ DES CARTES
+   ========================================= */
+
+.card-text {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   STYLE COMMUN AUX CARTES DES IA
+   ========================================= */
+
+.ai-card {
+    width: 58vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 58vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 18px;
+    text-align: justify;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Limiter les marges intérieures Bootstrap */
+
+.ai-card .card-body {
+    padding: 16px;
+}
+
+
+/* Titres des cartes */
+
+.ai-card .card-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ai-card .card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #565869;
+}
+
+.ai-card h4 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Conteneur des images */
+
+.ai-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Images et logos */
+
+.ai-logo {
+    display: block;
+    width: auto;
+    max-width: 220px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   THÈME 1 : GEMINI
+   Couleurs bleu et violet
+   ========================================= */
+
+.ai-gemini {
+    background-color: #f3f6ff;
+    border-color: #c9d7ff;
+    box-shadow:
+        0 4px 12px rgba(66, 134, 244, 0.61);
+}
+
+.ai-gemini .card-title {
+    color: #315fbd;
+}
+
+.ai-gemini h4 {
+    color: #6554a4;
+}
+
+.ai-gemini:hover {
+    border-color: #8ca9ff;
+    box-shadow:
+        0 8px 24px rgba(66, 134, 244, 0.882);
+}
+
+
+/* Bouton Gemini */
+
+.ai-gemini .ai-button {
+    background-color: #4285f4;
+    border-color: #4285f4;
+    color: #ffffff;
+}
+
+.ai-gemini .ai-button:hover {
+    background-color: #315fbd;
+    border-color: #315fbd;
+}
+
+
+/* =========================================
+   THÈME 2 : CHATGPT / OPENAI
+   Couleurs neutres et vertes
+   ========================================= */
+
+.ai-chatgpt {
+    background-color: #f7f7f8;
+    border-color: #d8d8dd;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.333);
+}
+
+.ai-chatgpt .card-title {
+    color: #202123;
+}
+
+.ai-chatgpt h4 {
+    color: #d9a337;
+}
+
+.ai-chatgpt:hover {
+    border-color: #d7bb06;
+    box-shadow:
+        0 8px 24px #d7bb06;
+}
+
+
+/* Bouton ChatGPT */
+
+.ai-chatgpt .ai-button {
+    background-color: #d9a337;
+    border-color: #d7bb06;
+    color: #ffffff;
+}
+
+.ai-chatgpt .ai-button:hover {
+    background-color: #d9a337;
+    border-color: #d7bb06;
+}
+
+
+/* =========================================
+   THÈME 3 : CLAUDE
+   Couleurs crème et orange
+   ========================================= */
+
+.ai-claude {
+    background-color: #faf5ed;
+    border-color: #e8d4bd;
+    box-shadow:
+        0 4px 12px rgba(150, 90, 45, 0.404);
+}
+
+.ai-claude .card-title {
+    color: #b95632;
+}
+
+.ai-claude h4 {
+    color: #a94e30;
+}
+
+.ai-claude:hover {
+    border-color: #c9825e;
+    box-shadow:
+        0 8px 24px rgba(193, 96, 60, 0.718);
+}
+
+
+/* Bouton Claude */
+
+.ai-claude .ai-button {
+    background-color: #c15f3c;
+    border-color: #c15f3c;
+    color: #ffffff;
+}
+
+.ai-claude .ai-button:hover {
+    background-color: #a94e30;
+    border-color: #a94e30;
+}
+
+
+/* =========================================
+   BOUTONS D'ACCÈS
+   ========================================= */
+
+.ai-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 24px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.ai-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PIED DE PAGE
+   ========================================= */
+
+.site-footer {
+    margin-top: auto;
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+.site-footer img {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.site-footer img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   RESPONSIVE : TABLETTES
+   ========================================= */
+
+@media (max-width: 992px) {
+    .ai-card {
+        width: 80%;
+    }
+
+    .introduction h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE : SMARTPHONES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    #titreprinsipale {
+        font-size: 30px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-header nav {
+        justify-content: center;
+    }
+
+    .introduction h2 {
+        font-size: 23px;
+    }
+
+    .ai-card {
+        width: 100%;
+        min-height: 0;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .ai-card .card-body {
+        padding: 10px;
+    }
+
+    .ai-card .card-title {
+        font-size: 24px;
+    }
+
+    .ai-card .card-subtitle {
+        font-size: 15px;
+    }
+
+    .ai-card h4 {
+        font-size: 18px;
+    }
+
+    .ai-logo {
+        max-width: 180px;
+        max-height: 120px;
+    }
+
+    .ai-button {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+}
+
+/* =========================================
+   PRÉVISUALISATION DES PAGES HTML
+   ========================================= */
+
+.preview-container {
+    margin-top: 30px;
+    padding: 15px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid #dee2e6;
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.preview-title {
+    margin: 0 0 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* Fenêtre intégrée */
+
+.ai-preview {
+    display: block;
+
+    width: 100%;
+    height: 420px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+}
+
+/* Bordure adaptée à chaque IA */
+
+.ai-gemini .preview-container {
+    border-color: #c9d7ff;
+}
+
+.ai-chatgpt .preview-container {
+    border-color: #b8dfd2;
+}
+
+.ai-claude .preview-container {
+    border-color: #e8d4bd;
+}
+
+/* Bouton d'accès à la page complète */
+
+.ai-card .ai-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Adaptation aux smartphones */
+
+@media (max-width: 600px) {
+
+    .preview-container {
+        padding: 8px;
+    }
+
+    .ai-preview {
+        height: 350px;
+    }
+
+    .preview-title {
+        font-size: 16px;
+    }
+}
+
+/*==========================================
+    image IA2
+===========================================*/
+/* Conteneur principal */
+.image-glow {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+    line-height: 0;
+}
+
+/* Image originale */
+.image-glow .glow-target {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Canvas générant le halo lumineux */
+.image-glow .glow-canvas {
+    position: absolute;
+
+    /* Débordement autour de l'image */
+    inset: -35px;
+
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+
+    z-index: 0;
+    pointer-events: none;
+
+    /* Apparition progressive */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Activation au survol */
+.image-glow:hover .glow-canvas {
+    opacity: 1;
+}
+
+/* Accessibilité : respect des animations réduites */
+@media (prefers-reduced-motion: reduce) {
+    .image-glow .glow-canvas {
+        transition: none;
+    }
+}
