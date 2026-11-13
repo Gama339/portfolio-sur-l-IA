@@ -1,68 +1,82 @@
-<!-- Formulaire de contact -->
-<form id="contact-form">
+<!DOCTYPE html>
+<html lang="fr">
 
-    <!-- Adresse e-mail -->
-    <div class="contact-champ">
-        <label for="contact-email">Adresse e-mail :</label>
-        <input type="email" id="contact-email" required>
-    </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio — Antoine Carré</title>
+    <link rel="stylesheet" href="CSS/CSS_porte_folio.css">
+</head>
 
-    <!-- Nom et prénom -->
-    <div class="contact-champ">
-        <label for="contact-nom">Nom et prénom :</label>
-        <input type="text" id="contact-nom">
-    </div>
+<body>
 
-    <!-- Société -->
-    <div class="contact-champ">
-        <label for="contact-societe">Société :</label>
-        <input type="text" id="contact-societe">
-    </div>
 
-    <!-- Message -->
-    <div class="contact-champ">
-        <label for="contact-message">Votre message :</label>
-        <textarea id="contact-message" rows="6" required></textarea>
-    </div>
+    <!-- Formulaire de contact -->
+    <form id="contact-form">
 
-    <!-- Bouton d'envoi -->
-    <button type="submit" class="contact-bouton">
-        Envoyer le message
-    </button>
+        <!-- Adresse e-mail -->
+        <div class="contact-champ">
+            <label for="contact-email">Adresse e-mail :</label>
+            <input type="email" id="contact-email" required>
+        </div>
 
-</form>
+        <!-- Nom et prénom -->
+        <div class="contact-champ">
+            <label for="contact-nom">Nom et prénom :</label>
+            <input type="text" id="contact-nom">
+        </div>
 
-<!-- Gestion de l'envoi du formulaire -->
-<script>
+        <!-- Société -->
+        <div class="contact-champ">
+            <label for="contact-societe">Société :</label>
+            <input type="text" id="contact-societe">
+        </div>
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+        <!-- Message -->
+        <div class="contact-champ">
+            <label for="contact-message">Votre message :</label>
+            <textarea id="contact-message" rows="6" required></textarea>
+        </div>
 
-    // Empêche l'envoi classique du formulaire
-    event.preventDefault();
+        <!-- Bouton d'envoi -->
+        <button type="submit" class="contact-bouton">
+            Envoyer le message
+        </button>
 
-    // Récupération des informations
-    const email = document.getElementById("contact-email").value;
-    const nom = document.getElementById("contact-nom").value;
-    const societe = document.getElementById("contact-societe").value;
-    const message = document.getElementById("contact-message").value;
+    </form>
 
-    // Construction du contenu du mail
-    const corps =
-        "Adresse e-mail : " + email + "\n" +
-        "Nom et prénom : " + nom + "\n" +
-        "Société : " + societe + "\n\n" +
-        "Message :\n" + message;
+    <!-- Gestion de l'envoi du formulaire -->
+    <script>
 
-    // Construction du lien mailto
-    const destinataire = "antonio2.0carre@gmail.com";
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
 
-    const lien = "mailto:" + destinataire +
-        "?subject=" + encodeURIComponent("Message depuis mon portfolio") +
-        "&body=" + encodeURIComponent(corps);
+            // Empêche l'envoi classique du formulaire
+            event.preventDefault();
 
-    // Ouverture du logiciel de messagerie
-    window.location.href = lien;
+            // Récupération des informations
+            const email = document.getElementById("contact-email").value;
+            const nom = document.getElementById("contact-nom").value;
+            const societe = document.getElementById("contact-societe").value;
+            const message = document.getElementById("contact-message").value;
 
-});
+            // Construction du contenu du mail
+            const corps =
+                "Adresse e-mail : " + email + "\n" +
+                "Nom et prénom : " + nom + "\n" +
+                "Société : " + societe + "\n\n" +
+                "Message :\n" + message;
 
-</script>
+            // Construction du lien mailto
+            const destinataire = "antonio2.0carre@gmail.com";
+
+            const lien = "mailto:" + destinataire +
+                "?subject=" + encodeURIComponent("Message depuis mon portfolio") +
+                "&body=" + encodeURIComponent(corps);
+
+            // Ouverture du logiciel de messagerie
+            window.location.href = lien;
+
+        });
+
+    </script>
+</body>
