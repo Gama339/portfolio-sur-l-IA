@@ -1,0 +1,68 @@
+<!-- Formulaire de contact -->
+<form id="contact-form">
+
+    <!-- Adresse e-mail -->
+    <div class="contact-champ">
+        <label for="contact-email">Adresse e-mail :</label>
+        <input type="email" id="contact-email" required>
+    </div>
+
+    <!-- Nom et prénom -->
+    <div class="contact-champ">
+        <label for="contact-nom">Nom et prénom :</label>
+        <input type="text" id="contact-nom">
+    </div>
+
+    <!-- Société -->
+    <div class="contact-champ">
+        <label for="contact-societe">Société :</label>
+        <input type="text" id="contact-societe">
+    </div>
+
+    <!-- Message -->
+    <div class="contact-champ">
+        <label for="contact-message">Votre message :</label>
+        <textarea id="contact-message" rows="6" required></textarea>
+    </div>
+
+    <!-- Bouton d'envoi -->
+    <button type="submit" class="contact-bouton">
+        Envoyer le message
+    </button>
+
+</form>
+
+<!-- Gestion de l'envoi du formulaire -->
+<script>
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+
+    // Empêche l'envoi classique du formulaire
+    event.preventDefault();
+
+    // Récupération des informations
+    const email = document.getElementById("contact-email").value;
+    const nom = document.getElementById("contact-nom").value;
+    const societe = document.getElementById("contact-societe").value;
+    const message = document.getElementById("contact-message").value;
+
+    // Construction du contenu du mail
+    const corps =
+        "Adresse e-mail : " + email + "\n" +
+        "Nom et prénom : " + nom + "\n" +
+        "Société : " + societe + "\n\n" +
+        "Message :\n" + message;
+
+    // Construction du lien mailto
+    const destinataire = "antonio2.0carre@gmail.com";
+
+    const lien = "mailto:" + destinataire +
+        "?subject=" + encodeURIComponent("Message depuis mon portfolio") +
+        "&body=" + encodeURIComponent(corps);
+
+    // Ouverture du logiciel de messagerie
+    window.location.href = lien;
+
+});
+
+</script>

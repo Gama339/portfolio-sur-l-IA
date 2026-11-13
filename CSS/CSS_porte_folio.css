@@ -89,18 +89,21 @@ main {
 
 .dif_type_ia {
     background-color: #ffffffa2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     hyphens: auto;
     width: 58vw;
     max-width: 100%;
+    min-height: 58vh;
     height: auto;
-    min-height: 80px;
+
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
     border: 1px solid #aecaff;
     border-radius: 18px;
     border-color: #0536fb;
+
+    text-align: justify;
 }
 
 .dif_type_ia:hover {
@@ -114,7 +117,7 @@ main {
 }
 
 .dif_type_ia div {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     color: #2a2d52;
     align-items: center;
 }
@@ -127,10 +130,10 @@ main {
     width: 58vw;
     max-width: 100%;
     height: auto;
-    min-height: 60px;
+    min-height: 58vh;
     margin-right: auto;
     margin-left: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: justify;
 }
 
