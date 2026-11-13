@@ -12,12 +12,21 @@
 
   <!-- Ton CSS personnalisé -->
   <link rel="stylesheet" href="CSS/CSS_porte_folio.css">
+  <link rel="stylesheet" href="CSS/horloge.css">
+
 </head>
 
 <body>
   <header class="container py-4">
     <div class="d-flex align-items-center justify-content-between">
       <h1 class="h3 mb-0" id="AcT">Bienvenue sur le portfolio d'Antoine Carré</h1>
+      <div class="blackout-sidebar-time">
+
+        <p id="blackout-horloge" class="blackout-sidebar-clock" aria-label="Heure_locale">
+          --:--:--
+        </p>
+
+      </div>
       <nav>
         <!-- <a class="btn btn-primary me-2" href="index.html">Accueil</a> -->
         <a class="btn btn-primary" href="velle_technologique.html">Veille technologique</a>
@@ -144,6 +153,7 @@
     </p>
 
   </footer>
+  <script src="JS/horloge.js"></script>
 
 </body>
 
