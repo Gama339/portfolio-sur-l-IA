@@ -6,6 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Le corps occupe au moins toute la hauteur de la fenêtre. */
 body {
     min-height: 100vh;
 
@@ -39,6 +40,7 @@ main {
     EN-TÊTE ET NAVIGATION
    ========================================= */
 
+/* Aligne le titre et la navigation ; les éléments passent à la ligne si nécessaire. */
 .site-header {
     display: flex;
     align-items: center;
@@ -56,26 +58,109 @@ main {
 
 
 /* =========================================
-    INTRODUCTION
+   INTRODUCTION
    ========================================= */
 
+/* Limite la largeur du texte et met en évidence la présentation du sujet. */
 .introduction {
-    max-width: 900px;
-    margin-right: auto;
-    margin-left: auto;
+    width: min(100%, 900px);
+    margin: 0 auto 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    color: #e8edf8;
+    text-align: left;
+    background: linear-gradient(135deg, rgba(25, 38, 70, 0.96), rgba(33, 28, 67, 0.92));
+    border: 1px solid rgba(125, 157, 255, 0.55);
+    border-left: 4px solid #7d9dff;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(5, 14, 38, 0.28);
 }
 
 .introduction h2 {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #cad3e3;
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+    font-weight: 650;
+    line-height: 1.25;
 }
 
 .introduction p {
-    color: #b8bbd4;
+    max-width: 72ch;
+    margin: 0;
+    color: #d4dced;
+    font-size: 1.05rem;
+    line-height: 1.75;
 }
 
+/* =========================================
+   TABLE DES MATIÈRES
+   ========================================= */
+
+/* Encadre le sommaire et garde la même largeur maximale que l’introduction. */
+.table-matiere {
+    width: min(100%, 900px);
+    margin: 0 auto 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    color: #202a44;
+    text-align: left;
+    background: #f7f9ff;
+    border: 1px solid #c6d4ff;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(5, 14, 38, 0.18);
+}
+
+.table-matiere h2 {
+    margin: 0 0 1rem;
+    color: #243c78;
+    font-size: 1.45rem;
+}
+
+/* Dispose les entrées du sommaire en deux colonnes sur grand écran. */
+.table-matiere ol {
+    display: grid;
+    /* Deux colonnes égales ; minmax évite que leur contenu déborde. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 1.5rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.table-matiere li {
+    padding: 0.2rem 0;
+}
+
+.table-matiere a {
+    color: #244ea3;
+    font-weight: 550;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+}
+
+/* Signale les liens actifs au survol de la souris ou au clavier. */
+.table-matiere a:hover,
+.table-matiere a:focus-visible {
+    color: #102d70;
+    text-decoration: underline;
+}
+
+.table-matiere a:focus-visible {
+    outline: 2px solid #5276d8;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+/* =========================================
+   NAVIGATION PAR ANCRES
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Laisse un espace au-dessus des titres atteints par un lien d’ancre. */
+h2,
+h3 {
+    scroll-margin-top: 80px;
+}
 /* =========================================
     Accueil TITRE PRINCIPALE
    ========================================= */
@@ -87,6 +172,7 @@ main {
     DIFFÉRENTS TYPES D'IA
    ========================================= */
 
+/* Présente la section qui explique les familles d’intelligence artificielle. */
 .dif_type_ia {
     background-color: #ffffffa2;
     margin-bottom: 10px;
@@ -95,14 +181,12 @@ main {
     max-width: 100%;
     min-height: 58vh;
     height: auto;
-
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
     border: 1px solid #aecaff;
     border-radius: 18px;
     border-color: #0536fb;
-
     text-align: justify;
 }
 
@@ -160,6 +244,7 @@ main {
    STYLE COMMUN AUX CARTES DES IA
    ========================================= */
 
+/* Règles communes aux cartes Gemini, ChatGPT, Claude et Ollama. */
 .ai-card {
     width: 58vw;
     max-width: 100%;
@@ -211,6 +296,7 @@ main {
 
 /* Conteneur des images */
 
+/* Centre chaque logo dans une zone de hauteur régulière. */
 .ai-image-container {
     display: flex;
     align-items: center;
@@ -223,6 +309,7 @@ main {
 
 /* Images et logos */
 
+/* Limite les dimensions sans déformer les proportions du logo. */
 .ai-logo {
     display: block;
     width: auto;
@@ -261,7 +348,8 @@ main {
 
 /* Bouton Gemini */
 
-.ai-gemini .ai-button {
+.ai-gemini /* Donne aux liens d’accès une apparence de bouton arrondi. */
+.ai-button {
     background-color: #4285f4;
     border-color: #4285f4;
     color: #ffffff;
@@ -437,6 +525,7 @@ main {
    PIED DE PAGE
    ========================================= */
 
+/* Le retrait automatique pousse le pied de page vers le bas. */
 .site-footer {
     margin-top: auto;
     background-color: #0d6efd;
@@ -457,6 +546,7 @@ main {
    RESPONSIVE : TABLETTES
    ========================================= */
 
+/* Ajustements pour les tablettes et les fenêtres moyennes. */
 @media (max-width: 992px) {
     .ai-card {
         width: 80%;
@@ -472,6 +562,7 @@ main {
    RESPONSIVE : SMARTPHONES
    ========================================= */
 
+/* Ajustements pour rendre les blocs lisibles sur téléphone. */
 @media (max-width: 600px) {
 
     #titreprinsipale {
@@ -487,8 +578,13 @@ main {
         justify-content: center;
     }
 
-    .introduction h2 {
-        font-size: 23px;
+    .table-matiere ol {
+        /* Sur téléphone, chaque entrée occupe sa propre ligne. */
+        grid-template-columns: 1fr;
+    }
+
+    .introduction p {
+        font-size: 1rem;
     }
 
     .ai-card {
@@ -532,6 +628,7 @@ main {
    PRÉVISUALISATION DES PAGES HTML
    ========================================= */
 
+/* Cadre autour de la page affichée dans la prévisualisation. */
 .preview-container {
     margin-top: 30px;
     padding: 15px;
@@ -555,6 +652,7 @@ main {
 
 /* Fenêtre intégrée */
 
+/* Taille et apparence de la fenêtre intégrée qui montre une autre page. */
 .ai-preview {
     display: block;
 
@@ -611,9 +709,11 @@ main {
     image IA2
 ===========================================*/
 /* Conteneur principal */
+/* Sert de repère de position pour placer le halo autour de l’image. */
 .image-glow {
     position: relative;
     display: inline-block;
+    /* Isole les niveaux d’affichage du halo de ceux des autres éléments. */
     isolation: isolate;
     line-height: 0;
 }
@@ -628,6 +728,7 @@ main {
 }
 
 /* Canvas générant le halo lumineux */
+/* Place le halo derrière l’image et ignore les clics de la souris. */
 .image-glow .glow-canvas {
     position: absolute;
 
@@ -651,6 +752,7 @@ main {
 }
 
 /* Accessibilité : respect des animations réduites */
+/* Respecte le réglage système de réduction des animations. */
 @media (prefers-reduced-motion: reduce) {
     .image-glow .glow-canvas {
         transition: none;

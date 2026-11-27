@@ -66,39 +66,49 @@
         <!-- Chargement du générateur de halo -->
         <!-- <script src="JS/halo.js" defer></script> -->
 
+        <!-- Table des matières -->
+        <nav class="table-matiere mb-5" aria-labelledby="titre-table-matiere">
+            <h2 id="titre-table-matiere">Table des matières</h2>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#types-ia">Les différents types d'intelligences artificielles</a></li>
+                <li><a href="#gemini">Google Gemini</a></li>
+                <li><a href="#chatgpt">OpenAI — ChatGPT</a></li>
+                <li><a href="#claude">Claude</a></li>
+                <li><a href="#ollama">Ollama</a></li>
+            </ol>
+        </nav>
+
         <!-- Introduction -->
-        <section class="introduction mb-5">
-
-            <h2>Les intelligences artificielles et le développement web</h2>
-
+        <section class="introduction mb-5" id="introduction" aria-labelledby="titre-introduction">
+            <h2 id="titre-introduction">Les intelligences artificielles et le développement web</h2>
             <p>
-                Cette veille technologique porte sur l'intelligence
-                artificielle dans le développement web et logiciel.
-                Elle vise à étudier les capacités des différents assistants
-                IA, leurs applications concrètes, leurs avantages et leurs limites.
+                Cette veille technologique explore la place de l'intelligence artificielle dans le développement
+                web et logiciel. Elle présente plusieurs assistants et outils, leurs usages pour concevoir ou
+                améliorer des sites web, ainsi que leurs avantages et leurs limites. L'objectif est de comparer
+                leurs capacités à partir d'exemples concrets.
             </p>
-
         </section>
-        <section class="dif_type_ia">
-            <h3>Les différents types d'intelligences artificielles</h3>
+
+        <section class="dif_type_ia" id="types-ia" aria-labelledby="titre-types-ia">
+            <h3 id="titre-types-ia">Les différents types d'intelligences artificielles</h3>
             <div>
-                <p> Les intelligences artificielles peuvent être classées en deux grandes catégories : <br> les LLMs
-                    (Large
-                    Language Models) et les World Models, en français les modèles mondes. [...] <br>
-
-                    Si les LLMs savent “parler du monde”, les World Models visent à comprendre et prédire le
-                    monde.
-                    [...]
-
-                    Tirer de la source : <a href="https://fenxi.fr/blog/alternatives-llms-world-models/ "
-                        target="_blank">fenxi.fr</a>
+                <p>
+                    Les intelligences artificielles peuvent être classées en deux grandes catégories : les LLM
+                    (<em>Large Language Models</em>) et les World Models, ou modèles du monde. Les LLM traitent
+                    et génèrent du langage, tandis que les World Models cherchent à représenter et à prédire
+                    l'évolution d'un environnement.
+                </p>
+                <p class="source">
+                    Source : <a href="https://fenxi.fr/blog/alternatives-llms-world-models/" target="_blank"
+                        rel="noopener noreferrer">fenxi.fr</a>
                 </p>
             </div>
         </section>
 
 
         <!-- ================= CARTE 1 : GEMINI ================= -->
-        <article class="card mb-4 ai-card ai-gemini" id="bl1">
+        <article class="card mb-4 ai-card ai-gemini" id="gemini">
 
             <!-- Logo Gemini -->
             <div class="ai-image-container">
@@ -168,7 +178,7 @@
 
 
         <!-- ================= CARTE 2 : CHATGPT ================= -->
-        <article class="card mb-4 ai-card ai-chatgpt" id="bl2">
+        <article class="card mb-4 ai-card ai-chatgpt" id="chatgpt">
 
             <!-- Logo OpenAI -->
             <div class="ai-image-container">
@@ -238,7 +248,7 @@
 
 
         <!-- ================= CARTE 3 : CLAUDE ================= -->
-        <article class="card mb-4 ai-card ai-claude" id="bl3">
+        <article class="card mb-4 ai-card ai-claude" id="claude">
 
             <!-- Logo Claude -->
             <div class="ai-image-container">
@@ -310,7 +320,7 @@
 
 
     <!-- ================= CARTE 4 : Ollama ================= -->
-    <article class="card mb-4 ai-card ai-Ollama" id="bl1">
+    <article class="card mb-4 ai-card ai-Ollama" id="ollama">
 
         <!-- Logo Ollama -->
         <div class="ai-image-container">
