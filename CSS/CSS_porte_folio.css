@@ -265,11 +265,14 @@ main {
     background-color: #4285f4;
     border-color: #4285f4;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .ai-gemini .ai-button:hover {
     background-color: #315fbd;
     border-color: #315fbd;
+    cursor: pointer;
+
 }
 
 
@@ -306,11 +309,15 @@ main {
     background-color: #d9a337;
     border-color: #d7bb06;
     color: #ffffff;
+    cursor: pointer;
+
 }
 
 .ai-chatgpt .ai-button:hover {
     background-color: #d9a337;
     border-color: #d7bb06;
+cursor: pointer;
+
 }
 
 
@@ -347,11 +354,14 @@ main {
     background-color: #c15f3c;
     border-color: #c15f3c;
     color: #ffffff;
+    cursor: pointer;
+
 }
 
 .ai-claude .ai-button:hover {
     background-color: #a94e30;
     border-color: #a94e30;
+    cursor: pointer;
 }
 
 
@@ -372,6 +382,8 @@ main {
         background-color 0.3s ease,
         border-color 0.3s ease,
         transform 0.3s ease;
+    cursor: pointer;
+
 }
 
 .ai-button:hover {
@@ -468,6 +480,8 @@ main {
     .ai-button {
         display: inline-block;
         max-width: 100%;
+        cursor: pointer;
+
     }
 
 }
@@ -600,4 +614,4 @@ main {
         transition: none;
     }
 }
-        cursor: pointer;
+        /*cursor: pointer;*/
