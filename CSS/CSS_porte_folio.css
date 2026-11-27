@@ -316,7 +316,7 @@ main {
 .ai-chatgpt .ai-button:hover {
     background-color: #d9a337;
     border-color: #d7bb06;
-cursor: pointer;
+    cursor: pointer;
 
 }
 
@@ -364,6 +364,48 @@ cursor: pointer;
     cursor: pointer;
 }
 
+/* =========================================
+   THÈME 4 : Ollama
+   Couleurs bleu et violet
+   ========================================= */
+
+.ai-Ollama {
+    background-color: #f3f6ff;
+    border-color: #c9d7ff;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.61);
+}
+
+.ai-Ollama .card-title {
+    color: #000000;
+}
+
+.ai-Ollama h4 {
+    color: #000000;
+}
+
+.ai-Ollama:hover {
+    border-color: #1f1f1f;
+    box-shadow:
+        0 8px 24px rgba(107, 107, 107, 0.882);
+}
+
+
+/* Bouton Ollama */
+
+.ai-Ollama .ai-button {
+    background-color: #000000;
+    border-color: #383838;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ai-Ollama .ai-button:hover {
+    background-color: #272727;
+    border-color: #606060;
+    cursor: pointer;
+
+}
 
 /* =========================================
    BOUTONS D'ACCÈS
@@ -614,4 +656,5 @@ cursor: pointer;
         transition: none;
     }
 }
-        /*cursor: pointer;*/
+
+/*cursor: pointer;*/
