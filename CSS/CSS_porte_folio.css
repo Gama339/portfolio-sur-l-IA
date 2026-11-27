@@ -207,18 +207,24 @@ h3 {
 }
 
 .dif_type_ia p {
-    align-items: justify;
     color: #1f287b;
-    margin-bottom: 20px;
+    margin: 0 auto 1rem;
     hyphens: auto;
-    width: 58vw;
+    width: 100%;
     max-width: 100%;
     height: auto;
-    min-height: 58vh;
-    margin-right: auto;
-    margin-left: auto;
+    min-height: 0;
     padding: 10px;
     text-align: justify;
+}
+
+/* Garde la référence de la source juste sous le texte principal. */
+.dif_type_ia .source {
+    margin-top: -0.75rem;
+    margin-bottom: 0;
+    padding-top: 0;
+    font-size: 0.9rem;
+    text-align: left;
 }
 
 /* =========================================
